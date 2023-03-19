@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Star from "./components/Star.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+   const [activeStar,setActiveStar]= useState();
+
+  return(
+    <div style={{ display:"flex",justifyContent:"center",marginTop:"15rem"}} >
+
+    {[1,2,3,4,5].map((item,index)=>{
+      return (
+              <Star 
+              starNo={index}
+              activeStar={activeStar}
+              setActiveStar={setActiveStar} />
+             );
+       })}
     </div>
-  );
-}
-
-export default App;
+  )}
+ export default App;

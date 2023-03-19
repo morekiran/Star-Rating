@@ -1,0 +1,19 @@
+body{
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(229,70,252,1) 100%);
+
+}
+
+.Star{
+    clip-path: polygon(50% 0%, 61% 35%,
+     98% 35%, 68% 57%, 79% 91%, 50% 70%, 
+    21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+    width: 7rem;
+    height: 7rem;
+    background-color:red;
+    
+}
+
+.inactiveStar{
+    background-color:gray;
+}
